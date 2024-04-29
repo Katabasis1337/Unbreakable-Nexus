@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="hu">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="icon" href="img/icon.ico">
+		<meta name='description' content='Unbreakable Nexus weboldal'>
+		<meta name='author' content='Föőr Tamás Dániel, Molnár Elek Péter, Nyikon Nándor'>
+		<meta name='owner' content='érett fiatalok'>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="style.css">
+		<title>UN - Wikipédia</title>
+		<script type="text/javascript">
+		function diffEasy() {
+			document.getElementById("enemy-name").style.backgroundColor = "RGBA(0,172,0,0.4)";
+			document.getElementById("enemy-stats").style.backgroundColor = "RGBA(0,172,0,0.4)";
+			document.getElementById("scaling").innerHTML = "<img src=\"img/scaling_icon.png\" alt=\"SC icon\" id=\"stat-icon\">Statisztika skálázódás nehézség alapján: <span style='color: green'>0.75x</span>";
+			document.getElementById("basehp").innerHTML = "<img src=\"img/hp_icon.png\" alt=\"HP icon\" id=\"stat-icon\">Alap életerő: <span style='color: red'>3</span> * <span style='color: green'>(hullámSzám / 2 * 0.75)</span>";
+			document.getElementById("basedmg").innerHTML = "<img src=\"img/attack_icon.png\" alt=\"DMG icon\" id=\"stat-icon\">Alap támadóérték: <span style='color: maroon'>2</span> * <span style='color: green'>(hullámSzám / 2 * 0.75)</span>";
+
+		}
+
+		function diffNormal() {
+			document.getElementById("enemy-name").style.backgroundColor = "RGBA(47,204,255,0.4)";
+			document.getElementById("enemy-stats").style.backgroundColor = "RGBA(47,204,255,0.4)";
+			document.getElementById("scaling").innerHTML = "<img src=\"img/scaling_icon.png\" alt=\"SC icon\" id=\"stat-icon\">Statisztika skálázódás nehézség alapján: <span style='color: blue'>1x</span>";
+			document.getElementById("basehp").innerHTML = "<img src=\"img/hp_icon.png\" alt=\"HP icon\" id=\"stat-icon\">Alap életerő: <span style='color: red'>3</span> * <span style='color: blue'>(hullámSzám / 2 * 0.75)";
+			document.getElementById("basedmg").innerHTML = "<img src=\"img/attack_icon.png\" alt=\"DMG icon\" id=\"stat-icon\">Alap támadóérték: <span style='color: maroon'>2</span> * <span style='color: blue'>(hullámSzám / 2 * 1)</span>";
+
+		}
+
+		function diffHard() {
+			document.getElementById("enemy-name").style.backgroundColor = "RGBA(255,59,59,0.4)";
+			document.getElementById("enemy-stats").style.backgroundColor = "RGBA(255,59,59,0.4)";
+			document.getElementById("scaling").innerHTML = "<img src=\"img/scaling_icon.png\" alt=\"SC icon\" id=\"stat-icon\">Statisztika skálázódás nehézség alapján: <span style='color: red'>2x</span>";
+			document.getElementById("basehp").innerHTML = "<img src=\"img/hp_icon.png\" alt=\"HP icon\" id=\"stat-icon\">Alap életerő: <span style='color: red'>3</span> * <span style='color: red'>(hullámSzám / 2 * 0.75)";
+			document.getElementById("basedmg").innerHTML = "<img src=\"img/attack_icon.png\" alt=\"DMG icon\" id=\"stat-icon\">Alap támadóérték: <span style='color: maroon'>2</span> * <span style='color: red'>(hullámSzám / 2 * 2)</span>";
+
+
+		}
+
+		function diffInsane() {
+			document.getElementById("enemy-name").style.backgroundColor = "RGBA(225,95,193,0.4)";
+			document.getElementById("enemy-stats").style.backgroundColor = "RGBA(225,95,193,0.4)";
+			document.getElementById("scaling").innerHTML = "<img src=\"img/scaling_icon.png\" alt=\"SC icon\" id=\"stat-icon\">Statisztika skálázódás nehézség alapján: <span style='color: purple'>4x</span>";
+			document.getElementById("basehp").innerHTML = "<img src=\"img/hp_icon.png\" alt=\"HP icon\" id=\"stat-icon\">Alap életerő: <span style='color: red'>3</span> * <span style='color: purple'>(hullámSzám / 2 * 0.75)";
+			document.getElementById("basedmg").innerHTML = "<img src=\"img/attack_icon.png\" alt=\"DMG icon\" id=\"stat-icon\">Alap támadóérték: <span style='color: maroon'>2</span> * <span style='color: purple'>(hullámSzám / 2 * 4)</span>";
+}
+		</script>
+</head>
+<body>
+    <header>
+        <img src="img/logo.png" id="kep" alt="logo">
+    </header>
+    <div class="container">
+      <nav>
+          <h2 id="navh2">Navigációs sáv</h2>
+          <ul>
+						<li><a href="index.html">Főoldal</a></li>
+						<li><a href="index.html#maps">Pályák</a></li>
+						<li><a href="index.html#enemies">Ellenségek</a></li>
+						<li><a href="index.html#difficulties">Nehézségi szintek</a></li>
+          </ul>
+      </nav>
+      <div class="content-container">
+        <main>
+          <main>
+              <section id="main">
+              	<h1 id="enemy-head"><img src="img/normal.png" alt="Normal Enemy" id="enemy-icon">Alap ellenség <img src="img/normal.png" alt="Normal Enemy" id="enemy-icon"></h1>
+								<hr>
+								<div id="enemy-desc-cont">
+									<p id="enemy-desc">Az alap ellenségek minden hullámban véletlenszerű mennyiségben idéződnek le. Velük párhuzamosan, idéződhetnek <a id="speedy-ref" href="speedy_enemy.html"><img src="img/speedy.png" alt="Speedy Enemy" id="enemy-icon-ref"> gyors</a> ellenfelek is. Alapvetően semmiféle különleges tulajdonsággal nem rendelkeznek.</p>
+									<p id="enemy-desc">Vannak <a id="map-ref" href="index.html#maps"><img src="img/map.png" alt="Map Icon" style="width: 18px; height: 18px;"> Pályákhoz</a> kötött változtatások, amelyek a hasonlóan a <a id="boss-ref" href="boss_enemy.html"><img src="img/boss.png" alt="Boss Enemy" id="enemy-icon-ref"> főellenséghez </a>, és a <a id="speedy-ref" href="speedy_enemy.html"><img src="img/speedy.png" alt="Speedy Enemy" id="enemy-icon-ref"> gyors</a> ellenségekhez, a főellenségeket is érintik:</p>
+									<p id="enemy-desc" style="margin-left: 30px;">Például a <a id="magical-ref" href="magical_forest.html"><img src="img/magical.png" alt="Magical Forest" id="map-icon-ref"> Magical Forest</a> pályán, amíg a <a id="boss-ref" href="boss_enemy.html"><img src="img/boss.png" alt="Boss Enemy" id="enemy-icon-ref"> főellenség</a> életben van a többi ellenség egyfajta áldást kap, ami <span style='color: purple'><b>1,5x</b></span>-es <span style='color: maroon'><img src="img/attack_icon.png" alt="DMG icon" id="stat-icon-ref">támadóérték</span>, és <span style='color: red'><img src="img/hp_icon.png" alt="HP icon" id="stat-icon-ref">életerő</span> növekedést jelent.</p>
+									<p id="enemy-desc">A statisztika skálázódás azt jelenti, hogy az alap <span style='color: red'><img src="img/hp_icon.png" alt="HP icon" id="stat-icon-ref">életerő</span>, és <span style='color: maroon'><img src="img/attack_icon.png" alt="DMG icon" id="stat-icon-ref">támadóérték</span> minden új hullám kezdetén ennyivel fog megemelkedni. Ez viszont az érmére nem vonatkozik, mivel azt nem befolyásolja az adott nehézségi szint. <i><span style='color: grey'>(Lásd a táblázatban)</span></i></p>
+								</div>
+								<div id="enemy-info">
+									<h1 id="enemy-name">Alap ellenség</h1>
+									<img src="img/normal_ig.png" alt="Normal Enemy" id="enemy-pic">
+									<p>Nehézségi szintek:</p>
+									<div id="diff-buttons">
+										<button id="easybtn" onclick="diffEasy();"><img src="img/easy.png" alt="Easy Difficulty" id="diff-icon"><b>Könnyű</b></button>
+										<button id="normalbtn" onclick="diffNormal();"><img src="img/dnormal.png" alt="Normal Difficulty" id="diff-icon"><b>Normál</b></button>
+										<button id="hardbtn" onclick="diffHard();"><img src="img/hard.png" alt="Hard Difficulty" id="diff-icon"><b>Nehéz</b></button>
+										<button id="insanebtn" onclick="diffInsane();"><img src="img/insane.png" alt="Insane Difficulty" id="diff-icon"><b>Insane</b></button>
+									</div>
+									<div id="enemy-stats">
+										<p id="scaling"><img src="img/scaling_icon.png" alt="SC icon" id="stat-icon">Statisztika skálázódás nehézség alapján: <span style='color: green'>0.75x</span></p>
+										<p id="basehp"><img src="img/hp_icon.png" alt="HP icon" id="stat-icon">Alap életerő: <span style='color: red'>3</span> * <span style='color: green'>(hullámSzám / 2 * 0.75)</span></p>
+										<p id="basedmg"><img src="img/attack_icon.png" alt="DMG icon" id="stat-icon">Alap támadóérték: <span style='color: maroon'>2</span> * <span style='color: green'>(hullámSzám / 2 * 0.75)</span></p>
+										<p id="basecoin"><img src="img/coin.png" alt="Coin icon" id="coin-icon">Érme: <span style='color: orange'>7</span> * <span style='color: white'>(hullámSzám * 0.35)</span></p>
+									</div>
+								</div>
+              </section>
+          </main>
+        </main>
+      <div class="white-background"></div>
+      </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 érett fiatalok</p>
+    </footer>
+</body>
+</html>

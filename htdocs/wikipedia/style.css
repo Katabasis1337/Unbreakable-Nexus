@@ -1,0 +1,529 @@
+@font-face { font-family: Poppins; src: url('fonts/poppins.TTF'); }
+body {
+    font-family: Poppins;
+    margin: 0;
+    padding: 0;
+    background-image: url('img/background.png');
+	background-size:cover;
+	background-repeat:no-repeat;
+}
+
+header {
+    background-color: rgba(242,242,242, 0.4);
+    text-align: center;
+    padding: 20px 0;
+}
+
+.container {
+    display: flex;
+}
+
+.container > * {
+    margin: 20px;
+}
+
+.container {
+    background-color: rgba(242,242,242, 0.4);
+
+}
+
+.white-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    z-index: -1;
+    border: 6px ridge rgba(213,80,255,1);
+}
+
+.content-container {
+    flex-grow: 1;
+    position: relative;
+}
+
+main {
+    padding: 20px;
+}
+
+#game-desc{
+  text-align: justify;
+}
+
+nav {
+    background-color: #fff;
+    border: 6px ridge rgba(213,80,255,0.7);
+    padding: 10px;
+    width: auto;
+    height: 300px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: block;
+    margin-bottom: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+section {
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: calc(100vh - 50px);
+}
+
+#welcome:hover,#intro:hover,#maps:hover,#enemies:hover,#difficulties:hover {
+    transform: scale(1.02);
+    transition: transform 0.8s ease;
+}
+
+#welcome,#intro,#maps,#enemies,#difficulties{
+  margin-bottom: 20px;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  height: auto;
+}
+
+#navh2 {
+    color: purple;
+    text-align: center;
+}
+
+#welcome{
+  margin-bottom: 60px;
+}
+
+#welcome-text{
+    font-weight: normal;
+    text-align: center;
+    color: purple;
+}
+
+#enemy-info{
+    background-color: #D6DBDF;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    width: 450px;
+    height: auto;
+	  right: 20px;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 12px;
+	margin-left: auto;
+  float: right;
+}
+
+#diff-box{
+  text-align: center;
+  margin: 0 150px 0 150px;
+}
+
+#enemy-head, #map-head{
+  color: purple;
+  margin: -10px 0 -5px 0;
+  font-size: 200%;
+}
+
+#enemy-desc, #map-desc{
+	margin-left: 10px;
+  text-align: justify;
+}
+
+#diff-desc{
+  font-size: 130%;
+}
+
+#diff-head{
+  font-size: 220%;
+}
+
+#enemy-name{
+  border: 2px solid black;
+  background-color: RGBA(0,172,0,0.4);
+  padding: 15px;
+  border-radius: 12px;
+  margin: -10px 0 0 0;
+}
+
+#mf-name{
+  border: 2px solid black;
+  background-color: RGBA(0,172,0,0.4);
+  padding: 15px;
+  border-radius: 12px;
+  margin: -10px 0 0 0;
+}
+
+#tv-name{
+  border: 2px solid black;
+  background-color: RGBA(225,95,193,1);
+  padding: 15px;
+  border-radius: 12px;
+  margin: -10px 0 0 0;
+}
+
+#nr-name{
+  border: 2px solid black;
+  background-color: RGBA(255,59,59,0.4);
+  padding: 15px;
+  border-radius: 12px;
+  margin: -10px 0 0 0;
+}
+
+#enemy-pic{
+	width: 250px;
+	height: 200px;
+}
+
+#map-pic{
+  margin-top: 10px;
+  width: auto;
+  height: 200px;
+  box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+}
+
+#enemy-stats{
+  border: 2px solid black;
+  border-radius: 0px 0px 12px 12px;
+  background-color: RGBA(0,172,0,0.4);
+  padding: 15px;
+  margin: 0 0 0 0;
+}
+
+#mf-stats{
+  border: 2px solid black;
+  border-radius: 0px 0px 12px 12px;
+  background-color: RGBA(0,172,0,0.4);
+  padding: 15px;
+  margin: 0 0 0 0;
+}
+
+#normal-stats{
+  border: 2px solid black;
+  border-radius: 0px 0px 0px 0px;
+  background-color: RGBA(47,204,255,0.4);
+  padding: 15px;
+  margin: 0 0 0 0;
+  height: auto;
+}
+
+#hard-stats{
+  border: 2px solid black;
+  border-radius: 0px 0px 0px 0px;
+  background-color: RGBA(255,59,59,0.4);
+  padding: 15px;
+  margin: 0 0 0 0;
+}
+
+#insane-stats{
+  border: 2px solid black;
+  border-radius: 0px 0px 12px 12px;
+  background-color: RGBA(225,95,193,0.4);
+  padding: 15px;
+  margin: 0 0 0 0;
+}
+
+#easy-stats{
+  border: 2px solid black;
+  border-radius: 12px 12px 0px 0px;
+  background-color: RGBA(0,172,0,0.4);
+  padding: 15px;
+  margin: 0 0 0 0;
+}
+
+#tv-stats{
+  border: 2px solid black;
+  border-radius: 0px 0px 12px 12px;
+  background-color: RGBA(225,95,193,1);
+  padding: 15px;
+  margin: 0 0 0 0;
+}
+
+#nr-stats{
+  border: 2px solid black;
+  border-radius: 0px 0px 12px 12px;
+  background-color: RGBA(255,59,59,0.4);
+  padding: 15px;
+  margin: 0 0 0 0;
+}
+
+#mf-stats h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#tv-stats h2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#nr-stats h2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#map-desc-cont, #enemy-desc-cont{
+    display: inline-block;
+    width: calc(100% - 520px);
+    vertical-align: top;
+    margin-right: 20px;
+}
+
+
+#diff-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* buttons */
+#easybtn {
+  background: #AAB7B8;
+  border-radius: 10px 10px 0px 0px;
+  color: #00AC00;
+  padding: 3px 5px 3px 5px;
+  border-top: solid black 2px;
+  border-right: solid black 2px;
+  border-left: solid black 2px;
+  border-bottom: none;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  width: 100px;
+  font-family: Poppins;
+}
+
+#easybtn:hover {
+  background: darkgreen;
+  text-decoration: none;
+}
+
+#normalbtn {
+  background: #AAB7B8;
+  border-radius: 10px 10px 0px 0px;
+  color: #2FCCFF;
+  padding: 3px 5px 3px 5px;
+  border-top: solid black 2px;
+  border-right: solid black 2px;
+  border-left: solid black 2px;
+  border-bottom: none;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  width: 100px;
+  font-family: Poppins;
+
+}
+
+#normalbtn:hover {
+  background: blue;
+  text-decoration: none;
+}
+
+#hardbtn {
+  background: #AAB7B8;
+  border-radius: 10px 10px 0px 0px;
+  color: #FF3B3B;
+  padding: 3px 5px 3px 5px;
+  border-top: solid black 2px;
+  border-right: solid black 2px;
+  border-left: solid black 2px;
+   border-bottom: none;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  font-family: Poppins;
+  width: 100px;
+}
+
+#hardbtn:hover {
+  background: darkred;
+  text-decoration: none;
+}
+
+#insanebtn {
+  background: #AAB7B8;
+  border-radius: 10px 10px 0px 0px;
+  color: #E15FC1FF;
+  padding: 3px 5px 3px 5px;
+  border-top: solid black 2px;
+  border-right: solid black 2px;
+  border-left: solid black 2px;
+  border-bottom: none;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  font-family: Poppins;
+  width: 100px;
+}
+
+#insanebtn:hover {
+  background: purple;
+  text-decoration: none;
+}
+
+#head-text{
+    color: purple;
+}
+
+/* ikonok */
+#map-icon {
+    width: 26px;
+    height: 26px;
+    margin-right: 10px;
+}
+
+#map-icon-ref{
+  width: 16px;
+  height: 18px;
+}
+
+#enemy-icon {
+    width: 32px;
+    height: 22px;
+    margin-right: 10px;
+}
+
+#enemy-icon-ref{
+  width: 18px;
+  height: 13px;
+}
+
+#coin-icon{
+  width: 12px;
+  height: 16px;
+  margin-right: 5px;
+}
+
+#stat-icon{
+  width: 22px;
+  height: 22px;
+  margin-right: 5px;
+}
+
+#stat-icon-ref{
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+}
+
+#diff-icon {
+    width: 18px;
+    height: 26px;
+    margin-right: 10px;
+}
+
+#mf-effect-icon{
+  width: 40px;
+  height: auto;
+  margin-right: 15px;
+}
+
+#tv-effect-icon{
+  width: 40px;
+  height: auto;
+  margin-right: 15px;
+}
+
+#nr-effect-icon{
+  width: 40px;
+  height: auto;
+  margin-right: 15px;
+}
+
+/* linkek */
+#magical,#magical-ref{
+  text-decoration: none;
+  color: green;
+}
+
+#void{
+  text-decoration: none;
+  color: purple;
+}
+
+#nether{
+  text-decoration: none;
+  color: red;
+}
+
+#normal,#normal-ref{
+  text-decoration: none;
+  color: gray;
+}
+
+#map-ref{
+  color: brown;
+  text-decoration: none;
+}
+
+#coin-ref{
+  color: gold;
+  text-decoration: none;
+}
+
+#speedy,#speedy-ref{
+  text-decoration: none;
+  color: turquoise;
+}
+
+#boss,#boss-ref{
+  text-decoration: none;
+  color: red;
+}
+
+#game-ref{
+  text-decoration: none;
+  color: purple;
+  font-weight: bold;
+}
+
+#easy{
+  text-decoration: none;
+  color: #00AC00;
+}
+
+#dnormal{
+  text-decoration: none;
+  color: #2FCCFF;
+}
+
+#hard{
+  text-decoration: none;
+  color: #FF3B3B;
+}
+
+#insane{
+  text-decoration: none;
+  color: #E15FC1FF;
+}
+
+#magical, #void, #nether, #normal, #speedy, #boss, #easy, #dnormal, #hard, #insane{
+    display: flex;
+    align-items: center;
+
+}
+
+footer {
+    background-color: #fff;
+    color: purple;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 20px;
+}

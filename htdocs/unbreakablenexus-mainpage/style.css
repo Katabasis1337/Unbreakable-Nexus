@@ -1,0 +1,171 @@
+@font-face { font-family: Poppins; src: url('fonts/poppins.TTF'); }
+body{
+  font-family: Poppins;
+  background-image: url('img/background.png');
+  background-size:cover;
+  background-repeat:no-repeat;
+  overflow: hidden;
+}
+#navbar{
+  background-color: rgba(211, 211, 211,0.6);
+  height: 100vh;
+  font-family: Poppins;
+}
+#panel{
+    border: 6px ridge rgba(213,80,255,0.8);
+    background-color: #fff;
+    padding: 15px;
+    font-family: Poppins;
+}
+#news{
+}
+#maintext{
+	border-bottom: 2px solid rgba(213,80,255,0.8);
+}
+#main{
+  margin-top: 10%;
+}
+#loginGomb,#registerGomb{
+  text-align: center;
+  background-color: purple;
+  border: white;
+  width: 190px;
+  height: 50px;
+  border-radius: 100px;
+  font-weight: bold;
+  color: white;
+  font-family: Poppins;
+}
+#logoutGomb{
+  text-align: center;
+  background-color: purple;
+  border: 2px solid white;
+  height: 43px;
+  border-radius: 100px;
+  color: white;
+  font-family: Poppins;
+}
+#user_icon{
+	color:purple;
+	font-size: 120%;
+}
+#reg_icon{
+	color: darkgreen;
+	font-size: 120%;
+}
+#easy_icon{
+	color: #00AC00;
+	font-size: 120%;
+}
+#normal_icon{
+	color: #2FCCFF;
+	font-size: 120%;
+}
+#hard_icon{
+	color: #FF3B3B;
+	font-size: 120%;
+}
+#insane_icon{
+	color: #E15FC1;
+	font-size: 120%;
+}
+#pt_icon{
+	color: orange;
+	font-size: 120%;
+}
+#dmg_icon{
+	color: darkred;
+	font-size: 120%;
+}
+#diamond_icon{
+}
+#login_icon,#logout_icon,#search_icon,#register_icon{
+	font-size: 140%;
+}
+#searchGomb{
+ text-align: center;
+ background-color: purple;
+ border: 2px solid white;
+ border-radius: 13px;
+ color:white;
+ font-family: Poppins;
+}
+#loginGomb:hover, #registerGomb:hover,#searchGomb:hover,#logoutGomb:hover{
+  background-color: rgba(128,0,128,0.4);
+}
+#loginGomb:active, #registerGomb:active,#searchGomb:active,#logoutGomb:active{
+  transform: translateY(2px);
+}
+#un, #pass, #email{
+  border: 2px purple ridge;
+  border-radius: 30px;
+  font-family: Poppins, FontAwesome;
+  font-size: 90%;
+}
+#kereses{
+  border: 3px rgba(213,80,255,0.8) ridge;
+  border-radius: 30px;
+  font-family: Poppins, FontAwesome;
+  padding: 6px;
+}
+#login-form, #register-form{
+  background-color: rgba(255,255,255,0.4);
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  border: 8px solid purple;
+  border-radius: 15px;
+  box-shadow: 0 0 50px 2px #B95CF4;
+  font-family: Poppins;
+}
+#regtext{
+}
+#loginctext{
+  color: white;
+
+}
+#udv{
+	font-size: 130%;
+}
+#udv span {
+    color: purple;
+ }
+#logo{
+  width: 300px;
+}
+#vertical-line{
+	border-right: 2px purple dotted;
+}
+.error-box {
+  background-color: rgba(255,0,0,0.4);
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  border: 3px solid darkred;
+  box-shadow: 0 0 5px 2px red;
+  color: white;
+  font-size: 80%;
+}
+.valid-box {
+  background-color: rgba(0,255,0,0.4);
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  border: 3px solid darkgreen;
+  box-shadow: 0 0 5px 2px green;
+  color: white;
+  font-size: 80%;
+}
+#float-bottom{
+	position: absolute;
+	bottom: 0;
+}
+#wiki-href{
+  text-decoration: none;
+  color: white;
+}
+#wikiGomb{
+  text-align: center;
+  background-color: purple;
+  border: 2px solid white;
+  height: auto;
+  color: white;
+  font-family: Poppins;
+}
